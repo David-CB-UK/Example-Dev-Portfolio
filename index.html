@@ -11,57 +11,62 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-sm bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mei Wong</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
 
-    <nav class="navbar navbar-expand-sm bg-body-tertiary"> <!-- change from lg to sm (*navbar-expand-sm) This ensures that the navbar collapses into a hamburger menu on screens smaller
-than 576px wide-->
-  <div class="container"> <!-- container (not container fluid) restricts the navbar width to match other page elements, ensuring visual cohesion across the site. -->
-    <a class="navbar-brand" href="index.html">Mei Wong</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto ">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#portfolio">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-    </div>
-  </div>
-</nav>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
 
-
-<!-- header -->
-<header id="hero" class="container">
-    <!-- section with hero image -->
-    <section class="row">
-        <!-- text-center class used to centre all text inside column -->
-        <div class="col-12 text-center">
-            <h1 class="display-4 my-4">Mei Wong</h1>
-            <!-- mb-5 gives extra margin spacing under subheading -->
-            <h2 class="display-6 mb-5">Software Developer</h2>
-            <p>
-                Hello! I'm Mei, a
-                <strong>passionate and creative Software Developer</strong>
-                dedicated to building engaging, user-friendly websites and
-                applications. With a keen eye for design and a love for coding,
-                <strong>I translate complex ideas into smooth, accessible digital
-                    experiences.</strong>
-                Eager to collaborate and grow, I'm on the lookout for opportunities
-                to innovate and excel.
-            </p>
-            <!-- mb-5 gives extra margin spacing under lead text -->
-            <p class="lead mb-5">Let's create something amazing together!</p>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </section>
-</header>
+    </nav>
+    <!-- header -->
+    <header id="hero" class="container">
+        <!-- section with hero image -->
+        <section class="row">
+            <!-- text-center class used to centre all text inside column -->
+            <div class="col-12 text-center">
+                <h1 class="display-4 my-4">Mei Wong</h1>
+                <!-- mb-5 gives extra margin spacing under subheading -->
+                <h2 class="display-6 mb-5">Software Developer</h2>
+                <p>
+                    Hello! I'm Mei, a
+                    <strong>passionate and creative Software Developer</strong>
+                    dedicated to building engaging, user-friendly websites and
+                    applications. With a keen eye for design and a love for coding,
+                    <strong>I translate complex ideas into smooth, accessible digital
+                        experiences.</strong>
+                    Eager to collaborate and grow, I'm on the lookout for opportunities
+                    to innovate and excel.
+                </p>
+                <!-- mb-5 gives extra margin spacing under lead text -->
+                <p class="lead mb-5">Let's create something amazing together!</p>
+                <!-- Bootstrap modal button -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Subscribe to my newsletter!
+                </button>
+            </div>
+        </section>
+    </header>
 
     <!-- main content -->
     <main>
@@ -177,7 +182,7 @@ than 576px wide-->
         </section>
     </main>
 
-     <!-- Contact section -->
+    <!-- Contact section -->
     <footer id="contact" class="container">
         <div class="row justify-content-center">
             <div class="col-12 text-center my-4">
@@ -214,6 +219,41 @@ than 576px wide-->
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Subscribe</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Join my newsletter for the latest updates on my projects,
+                        coding tips, and industry insights delivered straight to your
+                        inbox.
+                    </p>
+                    <form class="row g-3">
+                        <div class="col-lg-6">
+                            <label for="inputName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail">
+                        </div>
+                        <div class="col-12 mb-4">
+                            <button type="submit" class="btn btn-primary">
+                                Sign up!
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap JS Script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
