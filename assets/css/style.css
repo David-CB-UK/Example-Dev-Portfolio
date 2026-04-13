@@ -20,6 +20,11 @@ h2 {
     color: #184f63; /* dark-blue */
 }
 
+.sharp-corners,
+.sharp-corners * {
+    border-radius: 0;              /*the wildcard * selects all elements that have a parent with sharp-corners class */
+}
+
 /* About section */
 
 #about {
